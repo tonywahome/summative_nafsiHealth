@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - NAFSI Health</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3f4441 0%, #1a1c1b 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(85deg, #ca2d33 0%, #8b1f23 100%);
+            color: white;
+            padding: 1rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .header-content {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
+            font-size: 2.5rem;
+            margin: 0;
+            padding: 1rem 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #3f4441;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            font-weight: 200;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            background-color: #ca2d33;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: white;
+        }
+
+        .contact-section {
+            background-color: #3f4441;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            font-weight: 200;
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: #ca2d33;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: #ca2d33;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .info-card p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .info-card a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-card a:hover {
+            color: #ca2d33;
+        }
+
+        .contact-form {
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #ca2d33;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #8b1f23;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #ca2d33;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #8b1f23;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/nafsi-logo.jpg" alt="NAFSI Health Logo" class="logo">
+        <div class="header-content">
+            <h1>Contact Us</h1>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#resources">Resources</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="contact-section">
+            <h2>Get in Touch</h2>
+            <p>We're here to help! Choose your preferred method of contact below.</p>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Email</h3>
+                    <p>For general inquiries and support</p>
+                    <a href="mailto:info@nafsihealth.com">info@nafsihealth.com</a>
+                </div>
+
+                <div class="info-card">
+                    <h3>Location</h3>
+                    <p>Visit us at our office</p>
+                    <p>NORKSEN Kigali</p>
+                    <p>Kigali, Rwanda</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Phone</h3>
+                    <p>Call us directly</p>
+                    <a href="tel:+250792957809">+250 792 957 809</a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
+            return false;
+        }
+    </script>
+</body>
+
+</html>
