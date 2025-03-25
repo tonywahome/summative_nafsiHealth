@@ -60,6 +60,16 @@
             font-size: 1rem;
         }
 
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            background-color: white;
+        }
+
         .submit-btn {
             background: linear-gradient(85deg, #ca2d33 0%, #8b1f23 100%);
             color: white;
@@ -122,6 +132,15 @@
         </div>
         <form id="loginForm" onsubmit="return handleLogin(event)">
             <div class="form-group">
+                <label for="userType">User Type</label>
+                <select id="userType" name="userType" required>
+                    <option value="">Select User Type</option>
+                    <option value="patient">Patient</option>
+                    <option value="practitioner">Practitioner</option>
+                    <option value="administrator">Administrator</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
@@ -140,6 +159,15 @@
         <div class="form-box" id="create-account">
             <h2>Create Account</h2>
             <form id="signupForm" onsubmit="return handleSignup(event)">
+                <div class="form-group">
+                    <label for="signup-userType">User Type</label>
+                    <select id="signup-userType" name="userType" required>
+                        <option value="">Select User Type</option>
+                        <option value="patient">Patient</option>
+                        <option value="practitioner">Practitioner</option>
+                        <option value="administrator">Administrator</option>
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="signup-name">Full Name</label>
                     <input type="text" id="signup-name" name="name" required>
@@ -167,18 +195,20 @@
     <script>
         function handleLogin(event) {
             event.preventDefault();
+            const userType = document.getElementById('userType').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
             // Here you would typically validate credentials with a backend
             // For demo purposes, we'll just show a success message
-            alert('Login successful! Redirecting to dashboard...');
+            alert(`Login successful as ${userType}! Redirecting to dashboard...`);
             window.location.href = 'patient-dashboard.html';
             return false;
         }
 
         function handleSignup(event) {
             event.preventDefault();
+            const userType = document.getElementById('signup-userType').value;
             const name = document.getElementById('signup-name').value;
             const email = document.getElementById('signup-email').value;
             const password = document.getElementById('signup-password').value;
@@ -191,7 +221,7 @@
 
             // Here you would typically send this data to a backend
             // For demo purposes, we'll just show a success message
-            alert('Account created successfully! Redirecting to dashboard...');
+            alert(`Account created successfully as ${userType}! Redirecting to dashboard...`);
             window.location.href = 'patient-dashboard.html';
             return false;
         }
