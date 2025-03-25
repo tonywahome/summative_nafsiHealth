@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAFSI Health - Login/Sign Up</title>
+    <title>NAFSI Health - Sign Up</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
     <style>
         body {
@@ -17,7 +17,7 @@
             background: linear-gradient(135deg, #3f4441 0%, #1a1c1b 100%);
         }
 
-        .login-container {
+        .signup-container {
             background-color: gray;
             padding: 2rem;
             border-radius: 10px;
@@ -104,10 +104,16 @@
             color: white;
             text-decoration: none;
             font-weight: 200;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
         }
 
         .toggle-form a:hover {
-            text-decoration: underline;
+            background-color: white;
+            color: #3f4441;
+            text-decoration: none;
         }
 
         .back-home {
@@ -197,11 +203,11 @@
 
 <body>
     <a href="index.html" class="back-home">← Back to Home</a>
-    <div class="login-container">
+    <div class="signup-container">
         <div class="form-header">
-            <h1>Welcome to NAFSI Health</h1>
+            <h1>Create Account</h1>
         </div>
-        <form id="loginForm" onsubmit="return handleLogin(event)">
+        <form id="signupForm" onsubmit="return handleSignup(event)">
             <div class="form-group">
                 <label for="userType">User Type</label>
                 <select id="userType" name="userType" required>
@@ -212,6 +218,10 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
@@ -219,10 +229,14 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" class="submit-btn">Login</button>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
         </form>
         <div class="toggle-form">
-            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            <p>Already have an account? <a href="login.html">Login</a></p>
         </div>
     </div>
 
@@ -258,15 +272,22 @@
     </footer>
 
     <script>
-        function handleLogin(event) {
+        function handleSignup(event) {
             event.preventDefault();
             const userType = document.getElementById('userType').value;
+            const fullName = document.getElementById('fullName').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
 
-            // Here you would typically validate credentials with a backend
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return false;
+            }
+
+            // Here you would typically send this data to a backend
             // For demo purposes, we'll just show a success message
-            alert(`Login successful as ${userType}! Redirecting to dashboard...`);
+            alert(`Account created successfully as ${userType}! Redirecting to dashboard...`);
             window.location.href = 'patient-dashboard.html';
             return false;
         }
