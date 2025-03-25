@@ -5,7 +5,7 @@ NAFSI HEALTH PROJECT PROPOSAL
 
 
 
-Description of the concept of their Mission;
+
 My mission is to increase access to quality healthcare by leveraging technological tools to bridge the gap between health institutions and marginalised communities to deliver personalized, affordable care across Sub-Saharan Africa.     
 
 Problem statement: 
