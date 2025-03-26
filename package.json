@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.27.0",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
-    "typescript": "^5.8.2"
-  }
-}
